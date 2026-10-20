@@ -60,11 +60,11 @@
   #messageGroup {
     position: absolute;
 
-    top: 51%; /* Perfect center for a single message */
+    top: 51%;
     left: 50%;
 
-    /* Constrained width forces clean, balanced line wraps */
-    width: 65%;
+    /* Reduced width so it doesn't spill past the edges of the scratch zone */
+    width: 55%;
 
     transform: translate(-50%, -50%);
     transform-origin: center center;
@@ -85,11 +85,11 @@
   #mainMessage {
     position: relative;
     width: 100%;
-    max-width: 13ch; /* Forces text to break into balanced lines instead of trailing single words */
+    max-width: 16ch; /* Adjusted for smaller text size */
     margin: 0 auto;
 
     font-family: 'Aesthet', serif;
-    font-size: 27px;
+    font-size: 23px; /* Brought down a tad for a cleaner fit */
     line-height: 1.15;
 
     color: #8b0000; /* Deep Burgundy Red */
@@ -97,20 +97,7 @@
     overflow-wrap: break-word;
   }
 
-  /* ===== SECONDARY MESSAGE ===== */
-  #secondaryMessage {
-    width: 90%;
-    margin: 0;
-
-    font-family: 'Aesthet', serif;
-    font-size: 19px;
-    line-height: 1.15;
-
-    color: #198754; /* Festive Green */
-
-    overflow-wrap: break-word;
-  }
-
+  
    .sc__container canvas {
     position: absolute;
     top: 0;
