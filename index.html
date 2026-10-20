@@ -63,8 +63,8 @@
     top: 51%;
     left: 50%;
 
-    /* Reduced width so it doesn't spill past the edges of the scratch zone */
-    width: 55%;
+    /* Narrower width to keep it well inside the scratch zone */
+    width: 48%;
 
     transform: translate(-50%, -50%);
     transform-origin: center center;
@@ -85,11 +85,11 @@
   #mainMessage {
     position: relative;
     width: 100%;
-    max-width: 16ch; /* Adjusted for smaller text size */
+    max-width: 11ch; /* Forces text to wrap sooner into a narrower column */
     margin: 0 auto;
 
     font-family: 'Aesthet', serif;
-    font-size: 23px; /* Brought down a tad for a cleaner fit */
+    font-size: 27px; /* Kept your preferred larger size */
     line-height: 1.15;
 
     color: #8b0000; /* Deep Burgundy Red */
