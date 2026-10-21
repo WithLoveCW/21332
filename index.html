@@ -57,45 +57,41 @@
   }
 
 /* ===== MESSAGE GROUP POSITION ===== */
-  #messageGroup {
-    position: absolute;
+#messageGroup {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  width: 54%;
 
-    top: 51%;
-    left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
 
-    /* Narrower width to keep it well inside the scratch zone */
-    width: 48%;
+  z-index: 1;
+  visibility: hidden;
 
-    transform: translate(-50%, -50%);
-    transform-origin: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    z-index: 1;
-    visibility: hidden;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    text-align: center;
-  }
+  text-align: center;
+}
     
   /* ===== MAIN MESSAGE ===== */
-  #mainMessage {
-    position: relative;
-    width: 100%;
-    max-width: 11ch; /* Forces text to wrap sooner into a narrower column */
-    margin: 0 auto;
+#mainMessage {
+  position: relative;
+  width: 100%;
+  max-width: 15ch;
+  margin: 0 auto;
 
-    font-family: 'Aesthet', serif;
-    font-size: 27px; /* Kept your preferred larger size */
-    line-height: 1.15;
+  font-family: 'Aesthet', serif;
+  font-size: 25px;
+  line-height: 1.15;
 
-    color: #8b0000; /* Deep Burgundy Red */
+  color: #8b0000;
 
-    overflow-wrap: break-word;
-  }
+  overflow-wrap: break-word;
+}
 
   
    .sc__container canvas {
@@ -118,10 +114,9 @@
    <div id="js--sc--container" class="sc__container">
      <img id="backgroundImage" src="./images/back.png" alt="Background Image" />
 
-     <div id="messageGroup">
-       <div id="mainMessage"></div>
-       <div id="secondaryMessage"></div>
-     </div>
+    <div id="messageGroup">
+  <div id="mainMessage"></div>
+</div>
 
      <canvas id="scratchCanvas"></canvas>
    </div>
